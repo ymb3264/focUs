@@ -1,0 +1,320 @@
+/* 2021 05 29 수정*/
+/* 바디, 헤더, 메인, 푸터, 폰트, 메인컬러, 버튼 작성 */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+    font-family: 'NanumBarunGothic';
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	width: 100%;
+	display:flex;
+    justify-content:space-between;
+    background-color:white;
+    height: 70px;
+    border-bottom: 1px solid #ccc;
+	position: fixed;
+	z-index: 1000;
+}
+main{	
+	margin: 0 auto;
+
+}
+
+.main-color {
+	color: #ffc34d;
+}
+/* --------------------- font ------------------------*/
+	
+/* <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css">
+ */
+
+ /* 위에 cdn 각 html 파일에 넣어주세요~ */
+.font_main_title {
+	font-family: 'NanumBarunGothic';
+	font-size: 42px;
+	color: #000;
+	font-weight: 500;
+}
+
+.font_sub_title {
+	font-family: 'NanumBarunGothic';
+	font-size: 32px;
+	color: rgba(0, 0, 0, 0.603);
+}
+
+.font_content {
+	font-family: 'NanumBarunGothic';
+	font-size: 18px;
+	line-height: 30px;
+	letter-spacing: 0.5px;
+	color: #666;
+}
+
+
+/*--------------------- header -----------------------*/
+#header_logo {
+	min-width: 120px;
+	height: 50px;
+	background: url("../image/header_logo2.png");
+	cursor: pointer;
+	margin: 10px 0 10px 10px;
+}
+
+.cate_item {
+	height: 70px;
+	width: 200px;
+	border-style: none;
+	background-color: rgba(0,0,0,0);
+	font-size:18px;
+	font-weight: 500;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cate_toLogin {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	height: 70px;
+	border-style: none;
+	background-color: rgba(0,0,0,0);
+	color:black; 
+	width: 100%;
+}
+
+.cate_toMyPage{
+	margin:0px 20px;
+}
+
+.cate_to {
+	width: 100px;
+}
+
+.cate_category {
+	display: flex;
+	flex-direction: row;
+}
+
+.login_box,
+.user_box {
+	width: 100px;
+	position: relative;
+}
+
+/*------------------- footer -------------------------*/
+footer {
+	border-top: 5px solid #ffc34d;
+    width: 100%;
+    height: 60vh;
+	background: #fff;
+	position: relative;
+	margin-top: 100px;
+}
+
+.footer-container {
+	width: 1000px;
+	height: 350px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.footer-top {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-logo {
+	width: 250px;
+	height: 100px;
+	background-image: url("../image/footer_logo2.png");
+	cursor: pointer;
+}
+
+.footer-nav {
+	width: 650px;
+	display: flex;
+
+}
+
+.footer-nav-wrap {
+	width: 33%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-nav-wrap a {
+	padding: 10px 0;
+	font-weight: 600;
+	font-size: 17px;
+	letter-spacing: -2px;
+}
+
+.footer-nav-wrap a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.footer-content {
+	height: 70%;
+	display: flex;
+	align-items: center;
+}
+
+.footer-content-info {
+	margin: 10px 0;
+	color: #888;
+}
+
+
+.blur {
+	color: #888;
+}
+
+/* -----------button -------------- */
+
+.btn {
+	background-color: #ffc34d;
+	color: #fff;
+/*     box-shadow: 1px 1px 1px 1px #a07f3c; */
+	letter-spacing: -0.3px;
+	border-radius: 10px;
+	cursor: pointer;
+	border: none;
+}
+
+/* ------------fontawesome----------*/
+
+.fa-sign-in-alt {
+	font-size: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #666;
+	z-index: 10;
+	transition: .5s;
+	cursor: pointer;
+}
+
+.fa-sign-in-alt:hover {
+	color: #000;
+}
+
+.login_text,
+.mypage_text {
+	position: absolute;
+	top: 50%;
+	left: 20%;
+	transform: translate(-50%, -50%);
+	font-size: 12px;
+	color: #666;
+	opacity: 0;
+	transition: .2s;
+	display: hide;
+}
+
+.fa-sign-in-alt:hover ~ .login_text {
+	left: 0;
+	opacity: 1;
+	display: block;
+}
+
+.header-user {
+	font-size: 24px;
+	color: #666;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	transition: .5s;
+	cursor: pointer;
+}
+
+.fa-user:hover {
+	color: #000;
+}
+
+.fa-user:hover ~ .mypage_text {
+	left: 0;
+	opacity: 1;
+	display: block;
+}
+
+/*----------myPage------------*/
+
+.mypage_box {
+	position: absolute;
+	right: -90px;
+	top: 120px;
+	transform: translate(-50%, -50%);
+	width: 200px;
+	height: 160px;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 0.1px 0.1px 0.1px 0.5px #ccc;
+	z-index: 1;
+	transition: .2s;
+	opacity: 0;
+	padding: 20px 10px;
+}
+
+.mypage_box.active {
+	top: 153px;
+	opacity: 1;
+}
+
+.user_name {
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.user_name_bold {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.mypage_wrap {
+	display: flex;
+	flex-direction: row;
+	margin: 10px 0;
+}
+
+.fa-user-circle,
+.fa-cog,
+.fa-sign-out-alt {
+	margin-right: 10px;
+	color: #666;
+}
+
+.mypage_opt {
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.mypage_opt:hover {
+	text-decoration: underline;
+}
+
+.mypage_line {
+	border-bottom: 2px solid #ccc;
+	width: 100%;
+}
